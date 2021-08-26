@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+body {
+   font-family:'open sans',sans-serif;
+   background: #fff;
+   color: #333;
+   line-height: 1.6;
+}
+ul {list-style: none;}
+a {
+   text-decoration: none;
+   color: #333;
+}
+h1,h2 {
+   font-weight: 300;
+   line-height: 1.2;
+}
+p {margin: 10px 0;}
+img {width: 100%;}
+
+/* navbar */
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: #333;
+   color: #fff;
+   opacity: 0.8;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   height: 70px;
+   padding:0 30px;
+   transition: 0.5s;
+}
+.navbar ul {display: flex;}
+.navbar a {
+   padding: 10px 20px;
+   margin: 0 10px;
+   color: #fff;
+}
+.navbar a:hover {border-bottom: 2px solid #28a745;}
+.navbar .logo {
+   font-weight: 500;
+}
+.navbar.top {
+   background-color: transparent;
+}
+
+/* Hero section */
+.hero {
+   background: url('../images/home/showcase.jpg') no-repeat center center/cover;
+   height: 100vh;
+   position: relative;
+   color: #fff;
+}
+.hero * {z-index: 10;}
+.hero .content {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   height: 100%;
+   padding: 0 20px;
+}
+.hero .content h1 {font-size: 55px;}
+.hero .content p {
+   font-size: 23px;
+   max-width: 600px;
+   margin: 20px 0 30px;
+}
+.hero::before {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   right: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.6);
+}
+.hero.blog {
+   background: url(../images/home/blog.jpg) no-repeat center center/cover;
+   height: 30vh;
+}
+/* icons */
+.icons {
+   display: flex;
+   text-align: center;
+   padding: 30px;
+   flex: 1;
+}
+.icons h3 {
+   font-weight: bold;
+   margin-bottom: 1rem;
+}
+.icons i {
+   background-color: #28a745;
+   border-radius: 50%;
+   padding: 1rem;
+   color: #fff;
+   margin-bottom: 1rem
+}
+.flex-column img {
+   height: 100%;
+   object-fit: cover;
+}
+.flex-column .column-2 {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+   padding: 30px;
+}
+.flex-column h2 {
+   font-size: 40px;
+   font-weight: 100;
+}
+.flex-column h4 {margin-bottom: 20px;}
+.flex-column p {margin: 20px 0;}
+.cases img:hover {opacity: 0.9;}
+.section-header {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 30px;
+}
+.section-header h2 {
+   font-size: 40px; 
+   margin: 20px 0;
+}
+/* team Section */
+.team-intro {
+   display: flex;
+   text-align: center
+}
+.team-intro .flex-item {
+   padding: 0 15px;
+}
+.team-intro .flex-item img {border-radius: 50%;}
+/* post */
+.post {
+   padding: 50px 30px;
+}
+.post h2 {
+   font-size: 40px;
+   padding-bottom: 10px;
+   margin-bottom: 20px;
+   border-bottom: 1px solid #ccc;
+}
+.post .meta {margin-bottom: 30px;}
+.post img {
+   width:300px;
+   border-radius: 50%;
+   display:block;
+   margin: 0 auto 30px;
+}
+
+/* call BAck  */
+.callback-form {
+   width: 100%;
+   padding: 20px 0;
+}
+.callback-form label {
+   display: block;
+   padding: 5px 0;
+}
+.callback-form .form-control {
+   margin-bottom: 15px;
+}
+.callback-form input,
+.callback-form textarea {
+   padding: 5px;
+   height: 40px;
+   width: 100%;
+   border: none;
+   border-radius: 5px;
+}
+.callback-form textarea {height: 60px;font-family:'Open Sans';}
+.callback-form input:focus,
+.callback-form textarea:focus {
+   outline-color: #28a745;
+}
+/* footer */
+.footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+   height: 200px;
+}
+.footer .social i {padding: 0 15px;}
+.footer .social a{color: #fff;}
+.footer .social a:hover {color: #28a745;}
+
+/* Media query  Mobile*/
+@media (max-width:768px) {
+   .navbar {
+      display: block;
+      text-align: center;
+      height: 110px;
+   }
+   .navbar ul {
+      padding: 20px;
+      justify-content: center;
+   }
+   .navbar a {
+      padding: 10px;
+      margin: 5px;
+   }
+   .navbar .logo { padding-top: 10px; }
+   .icons {
+      display: inline;
+   }
+   .flex-column .column, .flex-grid .column {
+      flex: 100%;
+      max-width: 100%;
+   }
+   .team-intro {
+      flex-direction: column;
+   }
+}
